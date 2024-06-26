@@ -15,6 +15,14 @@ app.get("/", (req, res) => {
   res.render("index", { currentYear, joke: "" });
 });
 
+app.get("/misc", (req, res) => {
+  res.render("misc", { currentYear, joke: "" });
+});
+
+app.get("/programming", (req, res) => {
+  res.render("misc", { currentYear, joke: "" });
+});
+
 app.post("/get-joke", async (req, res) => {
   try {
     const response = await axios.get("https://v2.jokeapi.dev/joke/Any");
@@ -29,6 +37,40 @@ app.post("/get-joke", async (req, res) => {
   } catch (error) {
     console.error("Error fetching joke:", error);
     res.render("index", { currentYear, joke: "Failed to fetch a joke." });
+  }
+});
+
+app.post("/get-misc-joke", async (req, res) => {
+  try {
+    const response = await axios.get("https://v2.jokeapi.dev/joke/Misc");
+    const jokeData = response.data;
+    let joke = "";
+    if (jokeData.type === "single") {
+      joke = jokeData.joke;
+    } else {
+      joke = `${jokeData.setup} - ${jokeData.delivery}`;
+    }
+    res.render("misc", { currentYear, joke });
+  } catch (error) {
+    console.error("Error fetching joke:", error);
+    res.render("index", { currentYear, joke: "Failed to fetch a joke." });
+  }
+});
+
+app.post("/get-programming-joke", async (req, res) => {
+  try {
+    const response = await axios.get("https://v2.jokeapi.dev/joke/Programming");
+    const jokeData = response.data;
+    let joke = "";
+    if (jokeData.type === "single") {
+      joke = jokeData.joke;
+    } else {
+      joke = `${jokeData.setup} - ${jokeData.delivery}`;
+    }
+    res.render("misc", { currentYear, joke });
+  } catch (error) {
+    console.error("Error fetching joke:", error);
+    res.render("programming", { currentYear, joke: "Failed to fetch a joke." });
   }
 });
 
