@@ -11,9 +11,9 @@ app.set("view engine", "ejs");
 const currentYear = new Date().getFullYear();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("index");
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`); // Log message when the server starts
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
