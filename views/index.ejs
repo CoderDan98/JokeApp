@@ -59,7 +59,12 @@
 
     <main class="d-flex flex-column justify-content-center flex-grow-1">
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary btn-lg">Primary</button>
+        <form action="/get-joke" method="post">
+          <button type="submit" class="btn btn-primary btn-lg">Get Joke</button>
+        </form>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <p id="joke-display"><%= joke %></p>
       </div>
     </main>
 
