@@ -20,7 +20,23 @@ app.get("/misc", (req, res) => {
 });
 
 app.get("/programming", (req, res) => {
-  res.render("misc", { currentYear, joke: "" });
+  res.render("programming", { currentYear, joke: "" });
+});
+
+app.get("/dark", (req, res) => {
+  res.render("dark", { currentYear, joke: "" });
+});
+
+app.get("/pun", (req, res) => {
+  res.render("pun", { currentYear, joke: "" });
+});
+
+app.get("/spooky", (req, res) => {
+  res.render("spooky", { currentYear, joke: "" });
+});
+
+app.get("/christmas", (req, res) => {
+  res.render("christmas", { currentYear, joke: "" });
 });
 
 app.post("/get-joke", async (req, res) => {
@@ -53,7 +69,7 @@ app.post("/get-misc-joke", async (req, res) => {
     res.render("misc", { currentYear, joke });
   } catch (error) {
     console.error("Error fetching joke:", error);
-    res.render("index", { currentYear, joke: "Failed to fetch a joke." });
+    res.render("misc", { currentYear, joke: "Failed to fetch a joke." });
   }
 });
 
@@ -67,10 +83,78 @@ app.post("/get-programming-joke", async (req, res) => {
     } else {
       joke = `${jokeData.setup} - ${jokeData.delivery}`;
     }
-    res.render("misc", { currentYear, joke });
+    res.render("programming", { currentYear, joke });
   } catch (error) {
     console.error("Error fetching joke:", error);
     res.render("programming", { currentYear, joke: "Failed to fetch a joke." });
+  }
+});
+
+app.post("/get-dark-joke", async (req, res) => {
+  try {
+    const response = await axios.get("https://v2.jokeapi.dev/joke/Dark");
+    const jokeData = response.data;
+    let joke = "";
+    if (jokeData.type === "single") {
+      joke = jokeData.joke;
+    } else {
+      joke = `${jokeData.setup} - ${jokeData.delivery}`;
+    }
+    res.render("dark", { currentYear, joke });
+  } catch (error) {
+    console.error("Error fetching joke:", error);
+    res.render("dark", { currentYear, joke: "Failed to fetch a joke." });
+  }
+});
+
+app.post("/get-pun-joke", async (req, res) => {
+  try {
+    const response = await axios.get("https://v2.jokeapi.dev/joke/Pun");
+    const jokeData = response.data;
+    let joke = "";
+    if (jokeData.type === "single") {
+      joke = jokeData.joke;
+    } else {
+      joke = `${jokeData.setup} - ${jokeData.delivery}`;
+    }
+    res.render("pun", { currentYear, joke });
+  } catch (error) {
+    console.error("Error fetching joke:", error);
+    res.render("pun", { currentYear, joke: "Failed to fetch a joke." });
+  }
+});
+
+app.post("/get-spooky-joke", async (req, res) => {
+  try {
+    const response = await axios.get("https://v2.jokeapi.dev/joke/Spooky");
+    const jokeData = response.data;
+    let joke = "";
+    if (jokeData.type === "single") {
+      joke = jokeData.joke;
+    } else {
+      joke = `${jokeData.setup} - ${jokeData.delivery}`;
+    }
+    res.render("spooky", { currentYear, joke });
+  } catch (error) {
+    console.error("Error fetching joke:", error);
+    res.render("spooky", { currentYear, joke: "Failed to fetch a joke." });
+  }
+});
+
+app.post("/get-christmas-joke", async (req, res) => {
+  try {
+    const response = await axios.get("https://v2.jokeapi.dev/joke/Christmas");
+    const jokeData = response.data;
+    let joke = "";
+    if (jokeData.type === "single") {
+      joke = jokeData.joke;
+    } else {
+      joke = `${jokeData.setup} - ${jokeData.delivery}`;
+    }
+    res.render("christmas", { currentYear, joke });
+  } catch (error) {
+    console.error("Error fetching joke:", error);
+    res.render("christmas", { currentYear, joke: "Failed to fetch a joke." });
   }
 });
 
