@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 const currentYear = new Date().getFullYear();
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", { currentYear });
 });
 
 app.listen(PORT, () => {
