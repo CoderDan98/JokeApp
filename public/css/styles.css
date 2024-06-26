@@ -4,3 +4,16 @@
 #F4A261
 #E76F51 
 */
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  background-color: #e9c46a;
+  padding: 0;
+  margin: 0;
+}
