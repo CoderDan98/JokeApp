@@ -4,27 +4,3 @@
 #F4A261
 #E76F51 
 */
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
-footer {
-  background-color: blue;
-  margin-top: auto;
-  padding: 1rem 0;
-}
-
-footer .nav-link {
-  color: #6c757d;
-}
-
-footer .nav-link:hover {
-  color: #495057;
-}
