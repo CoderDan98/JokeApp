@@ -1,57 +1,67 @@
 /*
-#DAD3BE
-#B7B597
-#6B8A7A
-#254336
+Color Palette
+#DAD3BE - Light Beige
+#B7B597 - Olive Green
+#6B8A7A - Teal Green
+#254336 - Dark Green
 */
 
+/* Style for the navigation bar */
 .navbar {
-  background-color: #b7b597;
-  box-shadow: 5px 5px 10px #254336;
+  background-color: #b7b597; /* Olive Green background */
+  box-shadow: 5px 5px 10px #254336; /* Dark Green shadow */
 }
 
+/* Style for brand and navigation links within the navbar */
 .navbar-brand,
 .nav-link {
-  color: #6b8a7a;
+  color: #6b8a7a; /* Teal Green text color */
 }
 
+/* Hover effect for brand and navigation links */
 .nav-link:hover,
 .navbar-brand:hover {
-  color: #254336;
+  color: #254336; /* Dark Green text color on hover */
 }
 
+/* Active navigation link style */
 .navbar .navbar-nav .nav-item .nav-link.active {
-  color: #6b8a7a;
-  background-color: #dad3be;
+  color: #6b8a7a; /* Teal Green text color */
+  background-color: #dad3be; /* Light Beige background */
 }
 
+/* Body background color */
 body {
-  background-color: #dad3be;
+  background-color: #dad3be; /* Light Beige background */
 }
 
+/* Style for buttons */
 .btn {
-  background-color: #b7b597;
-  color: #6b8a7a;
-  height: 25rem;
-  width: 25rem;
-  font-size: 5rem;
-  border-radius: 50%;
-  box-shadow: 10px 10px 20px #254336;
-  text-shadow: 2px 2px #dad3be;
+  background-color: #b7b597; /* Olive Green background */
+  color: #6b8a7a; /* Teal Green text color */
+  height: 25rem; /* Height of the button */
+  width: 25rem; /* Width of the button */
+  font-size: 5rem; /* Font size */
+  border-radius: 50%; /* Rounded button */
+  box-shadow: 10px 10px 20px #254336; /* Dark Green shadow */
+  text-shadow: 2px 2px #dad3be; /* Light Beige text shadow */
 }
 
+/* Hover effect for buttons */
 .btn:hover {
-  background-color: #6b8a7a;
-  color: #b7b597;
-  box-shadow: 10px 10px 20px #254336;
-  text-shadow: 2px 2px #dad3be;
+  background-color: #6b8a7a; /* Teal Green background */
+  color: #b7b597; /* Olive Green text color */
+  box-shadow: 10px 10px 20px #254336; /* Dark Green shadow */
+  text-shadow: 2px 2px #dad3be; /* Light Beige text shadow */
 }
 
+/* Style for joke text */
 .joke {
-  color: #6b8a7a;
+  color: #6b8a7a; /* Teal Green text color */
 }
 
+/* Style for footer */
 footer {
-  background-color: #b7b597;
-  color: #6b8a7a;
+  background-color: #b7b597; /* Olive Green background */
+  color: #6b8a7a; /* Teal Green text color */
 }
