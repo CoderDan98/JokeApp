@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <nav class="navbar navbar-expand-lg p-3">
       <a class="navbar-brand" href="#">Joke App</a>
       <button
         class="navbar-toggler"
@@ -60,16 +60,16 @@
     <main class="d-flex flex-column justify-content-center flex-grow-1">
       <div class="d-flex justify-content-center">
         <form action="/get-misc-joke" method="post">
-          <button type="submit" class="btn btn-primary btn-lg">Get Joke</button>
+          <button type="submit" class="btn btn-lg">Get Joke</button>
         </form>
       </div>
-      <div class="d-flex justify-content-center mt-3">
-        <p id="joke-display"><%= joke %></p>
+      <div class="d-flex justify-content-center mt-3 p-3">
+        <p id="joke-display" class="joke"><%= joke %></p>
       </div>
     </main>
 
-    <footer class="py-3 bg-light">
-      <p class="text-center text-muted">© <%= currentYear %> Daniel Sarney</p>
+    <footer class="py-3">
+      <p class="text-center">© <%= currentYear %> Daniel Sarney</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
