@@ -73,6 +73,6 @@ footer {
   }
 
   .navbar .navbar-nav .nav-item .nav-link.active {
-    padding: 1rem;
+    padding: 1rem; /* Extra padding on the selected link */
   }
 }
