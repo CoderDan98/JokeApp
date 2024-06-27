@@ -1,3 +1,40 @@
+.navbar {
+  background-color: #f4a261;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #e76f51;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #e9c46a;
+}
+
 body {
-  background-color: red;
+  background-color: #e9c46a;
+}
+
+.btn {
+  background-color: #36ba98;
+  color: #e9c46a;
+  height: 25rem;
+  width: 25rem;
+  font-size: 5rem;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  background-color: #e76f51;
+  color: #f4a261;
+}
+
+.joke {
+  color: #e76f51;
+}
+
+footer {
+  background-color: #f4a261;
+  color: #e76f51;
 }
