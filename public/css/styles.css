@@ -65,3 +65,14 @@ footer {
   background-color: #b7b597; /* Olive Green background */
   color: #6b8a7a; /* Teal Green text color */
 }
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  nav ul li:first-child {
+    margin-top: 0.5rem; /* Increase the space above the first item on mobile */
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link.active {
+    padding: 1rem;
+  }
+}
