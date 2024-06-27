@@ -1,40 +1,57 @@
+/*
+#DAD3BE
+#B7B597
+#6B8A7A
+#254336
+*/
+
 .navbar {
-  background-color: #f4a261;
+  background-color: #b7b597;
+  box-shadow: 5px 5px 10px #254336;
 }
 
 .navbar-brand,
 .nav-link {
-  color: #e76f51;
+  color: #6b8a7a;
 }
 
 .nav-link:hover,
 .navbar-brand:hover {
-  color: #e9c46a;
+  color: #254336;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #6b8a7a;
+  background-color: #dad3be;
 }
 
 body {
-  background-color: #e9c46a;
+  background-color: #dad3be;
 }
 
 .btn {
-  background-color: #36ba98;
-  color: #e9c46a;
+  background-color: #b7b597;
+  color: #6b8a7a;
   height: 25rem;
   width: 25rem;
   font-size: 5rem;
   border-radius: 50%;
+  box-shadow: 10px 10px 20px #254336;
+  text-shadow: 2px 2px #dad3be;
 }
 
 .btn:hover {
-  background-color: #e76f51;
-  color: #f4a261;
+  background-color: #6b8a7a;
+  color: #b7b597;
+  box-shadow: 10px 10px 20px #254336;
+  text-shadow: 2px 2px #dad3be;
 }
 
 .joke {
-  color: #e76f51;
+  color: #6b8a7a;
 }
 
 footer {
-  background-color: #f4a261;
-  color: #e76f51;
+  background-color: #b7b597;
+  color: #6b8a7a;
 }
